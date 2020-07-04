@@ -64,6 +64,8 @@ $ pip install zmq
 
 ## publish/subscribeモデル
 
+### Redis
+
 1. Redisサーバーを起動する
 2. 他のターミナルでsubscribeを以下のコマンドで起動する
 ```
@@ -103,6 +105,44 @@ Publish: norwegian forest wears a tam-o-shanter
 Publish: norwegian forest wears a tam-o-shanter
 ```
 
+### ZeroMQ
+
+1. 以下のコマンドでsubscribe側をターミナルで実行する
+
+```
+$python zmq_sub.py
+```
+2. 他のターミナルでpublishを以下のコマンドで行う
+
+```
+$python zmq_pub.py
+```
+この時、publish側では発行したものが表示される
+
+```
+(venv) O-12268-MAC:study_python_network takashi.a.imoto$ python zmq_pub.py 
+Publish: maine coon wears a bowler
+Publish: norwegian forest wears a fedora
+Publish: norwegian forest wears a tam-o-shanter
+Publish: norwegian forest wears a stovepipe
+Publish: norwegian forest wears a tam-o-shanter
+Publish: persian wears a bowler
+Publish: maine coon wears a stovepipe
+Publish: maine coon wears a tam-o-shanter
+Publish: persian wears a bowler
+Publish: siamese wears a fedora
+```
+
+一方で、subscribe側では受信したものが表示される
+```
+(venv) O-12268-MAC:study_python_network takashi.a.imoto$ python zmq_sub.py 
+Subscribe: maine coon wears a bowler
+Subscribe: persian wears a bowler
+Subscribe: maine coon wears a stovepipe
+Subscribe: maine coon wears a tam-o-shanter
+Subscribe: persian wears a bowler
+
+```
 
 ### 参考文献
 『入門Python3』 11.2ネットワーク
