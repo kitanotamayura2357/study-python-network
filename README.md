@@ -52,7 +52,27 @@ redis-server
 
 ```
 
+
+
+
+
+
 #### ZeroMQのインストール
 ```
 $ pip install zmq
 ```
+
+## publish/subscribeモデル
+
+1. Redisサーバーを起動する
+2. 他のターミナルでsubscribeを以下のコマンドで起動する
+```
+python redis_sub.py 
+```
+3. さらに他のターミナルでpublishを以下のコマンドで実行する
+```
+python redis_pub.py 
+```
+
+### 参考文献
+『入門Python3』 11.2ネットワーク
