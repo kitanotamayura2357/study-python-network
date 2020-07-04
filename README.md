@@ -69,10 +69,40 @@ $ pip install zmq
 ```
 python redis_sub.py 
 ```
+
 3. さらに他のターミナルでpublishを以下のコマンドで実行する
 ```
 python redis_pub.py 
 ```
+この時publish側のターミナルではpublishしたデータが`print`によって表示される
+```
+Publish: siamese wears a tam-o-shanter
+Publish: norwegian forest wears a tam-o-shanter
+Publish: maine coon wears a stovepipe
+Publish: norwegian forest wears a tam-o-shanter
+Publish: siamese wears a fedora
+Publish: norwegian forest wears a fedora
+Publish: siamese wears a tam-o-shanter
+Publish: siamese wears a fedora
+Publish: norwegian forest wears a fedora
+Publish: siamese wears a bowler
+```
+
+一方で、subscribe側のターミナルでは受け取ったデータが`print`で表示される
+
+```
+Publish: siamese wears a stovepipe
+Publish: maine coon wears a bowler
+Publish: siamese wears a stovepipe
+Publish: maine coon wears a stovepipe
+Publish: persian wears a bowler
+Publish: persian wears a bowler
+Publish: maine coon wears a tam-o-shanter
+Publish: siamese wears a fedora
+Publish: norwegian forest wears a tam-o-shanter
+Publish: norwegian forest wears a tam-o-shanter
+```
+
 
 ### 参考文献
 『入門Python3』 11.2ネットワーク
