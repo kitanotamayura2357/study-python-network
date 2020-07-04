@@ -8,6 +8,10 @@
 $ pip install redis
 ```
 
+```
+$ brew install redis 
+```
+
 #### ZeroMQのインストール
 ```
 $ pip install zmq
