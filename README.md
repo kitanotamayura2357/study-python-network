@@ -3,7 +3,12 @@
 
 ## 環境構築
 
-redisのインストール
+#### redisのインストール
 ```
 $ pip install redis
+```
+
+#### ZeroMQのインストール
+```
+$ pip install zmq
 ```
